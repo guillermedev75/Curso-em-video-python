@@ -12,9 +12,23 @@ def calcular_IMC(peso,altura):
 #Nome do indiviuo
 nome = input('Qual seu nome? ')
 
-#Atributos
-peso = float(input('Qual seu peso?'))
-altura = float(input('Qual sua altura?'))
+#Entrada do peso
+peso = float(input('Qual seu peso? '))
+
+#Verificação do peso
+while(peso <= 0 or peso >= 500):
+    print('Insira um peso valido!')
+    peso = float(input('Qual seu peso? '))
+
+
+#Entrada da altura
+altura = float(input('Qual sua altura? '))
+
+#Verificação da altura
+while(altura <= 0 or altura >= 3):
+    print('Insira uma altura valida!')
+    altura = float(input('Qual sua altura? '))
+
 
 #Onde a função é chamada
 IMC = calcular_IMC(peso,altura)
