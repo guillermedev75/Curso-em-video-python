@@ -9,9 +9,21 @@ def calcula_litro(prc,vpg): #Preço e Valor Pago
 
 #Variaveis
 
-#Atributos (Preço e Valor Pago)
+#Entrada preço
 prc = float(input('Quanto está o litro da gasolina? ')) 
+
+#Verificação preço
+while(prc <= 0):
+    print('Insira o preço por litro correto!')
+    prc = float(input('Quanto está o litro da gasolina? ')) 
+
+#Entrada do Valor pago
 vpg = float(input('Quanto foi pago? ')) 
+
+#Verificação do valor pago
+while(vpg <= 0):
+    print('Insira o valor pago corretamente!')
+    vpg = float(input('Quanto foi pago? ')) 
 
 #Onde a função que chamada
 litros = calcula_litro(prc,vpg)
